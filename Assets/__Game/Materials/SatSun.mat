@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: SatSun
+  m_Shader: {fileID: 4800000, guid: d3073e2653cda874cba97b7ff943f99d, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _FrontTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BackTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _LeftTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _RightTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _UpTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DownTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Illum
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _diffuse
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _diffuseTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Refraction
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Cutoff
+        second: .5
+      data:
+        first:
+          name: _EmissionLM
+        second: 0
+      data:
+        first:
+          name: _glow
+        second: 7
+      data:
+        first:
+          name: _thinness
+        second: 2.93000007
+      data:
+        first:
+          name: _faceOpacity
+        second: .482142866
+      data:
+        first:
+          name: _falloff
+        second: 1.16999996
+      data:
+        first:
+          name: _steepness
+        second: 4.48999977
+      data:
+        first:
+          name: _node_3464
+        second: 3.69230795
+      data:
+        first:
+          name: _node_281
+        second: -.495726496
+      data:
+        first:
+          name: _scale
+        second: 0
+      data:
+        first:
+          name: _node_6667
+        second: 7
+      data:
+        first:
+          name: _RefractionIntensity
+        second: .100000001
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _Tint
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _tint
+        second: {r: 1, g: .475861996, b: 0, a: 1}
+      data:
+        first:
+          name: _skyColor
+        second: {r: .122242697, g: .688108385, b: .875, a: 1}
+      data:
+        first:
+          name: _atmosColor
+        second: {r: .838235319, g: .4199678, b: .0986159071, a: 1}
+      data:
+        first:
+          name: _node_7093
+        second: {r: 1, g: 0, b: 0, a: .545098126}
+      data:
+        first:
+          name: _node_5306
+        second: {r: .986207008, g: 0, b: 1, a: 1}

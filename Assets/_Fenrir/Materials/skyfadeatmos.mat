@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: skyfadeatmos
+  m_Shader: {fileID: 4800000, guid: b3710d5f47faf624db9a900566f239cb, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _node_3464
+        second: 1.54945087
+      data:
+        first:
+          name: _node_281
+        second: -.0714285597
+      data:
+        first:
+          name: _timeOfDay
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _node_1758
+        second: {r: .700691998, g: .823514462, b: .992647052, a: 1}
+      data:
+        first:
+          name: _node_4225
+        second: {r: 1, g: .268965542, b: 0, a: 1}
+      data:
+        first:
+          name: _daySky
+        second: {r: .354400903, g: .682988226, b: .845588207, a: 1}
+      data:
+        first:
+          name: _dayAtmos
+        second: {r: .875, g: .449302703, b: .122242697, a: 1}
+      data:
+        first:
+          name: _nightSky
+        second: {r: 0, g: 0, b: .0627451017, a: 1}
+      data:
+        first:
+          name: _nightAtmos
+        second: {r: .148680776, g: .15256083, b: .161764681, a: 1}
+      data:
+        first:
+          name: _skyColor
+        second: {r: .882352948, g: .956186652, b: 1, a: 1}
+      data:
+        first:
+          name: _atmosColor
+        second: {r: .860294104, g: .723659158, b: .518706739, a: 1}
