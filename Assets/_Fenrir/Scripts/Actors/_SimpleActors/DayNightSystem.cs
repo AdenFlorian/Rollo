@@ -40,7 +40,7 @@ public class DayNightSystem : MonoBehaviour {
 		// Rotate DLights
 		sunDLight.transform.eulerAngles = new Vector3((timeOfDay * 360f) - 90, 0f, 0f);
 		moonDLight.transform.eulerAngles = new Vector3((timeOfDay * 360f) + 90f, 0f, 0f);
-		DebugUI.AddLine("TimeOfDay: " + timeOfDay.ToString("P"));
+		DebugUI.AddWatchLine("TimeOfDay: " + timeOfDay.ToString("P"));
 		RenderSettings.fogColor = Color.Lerp(nightAtmosColor, dayAtmosColor, curve.Evaluate(timeOfDay));
 		skyAtmosRenderer.sharedMaterial.SetFloat("_timeOfDay", timeOfDay);
 		skyAtmosRenderer.sharedMaterial.SetColor("_skyColor", Color.Lerp(nightSkyColor, daySkyColor, curve.Evaluate(timeOfDay)));

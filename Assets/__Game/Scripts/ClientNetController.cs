@@ -5,11 +5,11 @@ public class ClientNetController : MonoBehaviour {
 
 	public int disconnectTimeout = 200; // Default 200
 
-	void Start() {
+	public void Connect() {
 		ConnectToServer();
 	}
 
-	void Disconnect() {
+	public void Disconnect() {
 		Network.Disconnect(disconnectTimeout);
 	}
 

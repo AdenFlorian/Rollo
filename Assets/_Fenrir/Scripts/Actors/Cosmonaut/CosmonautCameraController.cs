@@ -10,9 +10,11 @@ public class CosmonautCameraController : CosmonautComponent {
 	}
 
 	void Update() {
-		cameraXRotation += cosmonaut.humanMove.lookVertical;
-		cosmonaut.camera.transform.localRotation = Quaternion.Euler(new Vector3(cameraXRotation, 0, 0));
+		if (cosmonaut.camera != null) {
+			cameraXRotation += cosmonaut.humanMove.lookVertical;
+			cosmonaut.camera.transform.localRotation = Quaternion.Euler(new Vector3(cameraXRotation, 0, 0));
 
-		cosmonaut.humanMove.lookVertical = 0;
+			cosmonaut.humanMove.lookVertical = 0;
+		}
 	}
 }

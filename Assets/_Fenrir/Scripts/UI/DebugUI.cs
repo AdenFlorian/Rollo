@@ -5,7 +5,13 @@ using System.Collections;
 public class DebugUI : MonoBehaviour {
 
 	public static DebugUI Inst;
-	public UnityEngine.UI.Text uiText;
+
+	public UnityEngine.UI.Text watchesUIText;
+	public UnityEngine.UI.Text debugLogsUIText;
+
+	public Color normalColor;
+	public Color errorColor;
+
 	public static bool display = false;
 	public static string uiTextStr;
 
@@ -20,17 +26,47 @@ public class DebugUI : MonoBehaviour {
 	void Start () {
 	}
 
+	void OnEnable() {
+		Application.RegisterLogCallback(HandleLog);
+	}
+	void OnDisable() {
+		Application.RegisterLogCallback(null);
+	}
+
 	void Update() {
 		uiTextStr = "";
 	}
 
 	void LateUpdate() {
-		uiText.text = uiTextStr;
+		watchesUIText.text = uiTextStr;
 	}
 
-	public static void AddLine(string line) {
+	public static void AddWatchLine(string line) {
 		if (display) {
 			uiTextStr += line + "\n";
 	    }
+	}
+
+	void HandleLog(string logString, string stackTrace, LogType type) {
+		Debug.Log("wewgw");
+		debugLogsUIText.text = logString;
+		Color newColor = normalColor;
+		switch (type) {
+			case LogType.Assert:
+				break;
+			case LogType.Error:
+				newColor = errorColor;
+				break;
+			case LogType.Exception:
+				break;
+			case LogType.Log:
+				break;
+			case LogType.Warning:
+				break;
+			default:
+				break;
+		}
+		debugLogsUIText.color = newColor;
+		debugLogsUIText.animation.Play();
 	}
 }

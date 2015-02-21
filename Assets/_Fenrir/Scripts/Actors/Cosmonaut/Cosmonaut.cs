@@ -60,7 +60,11 @@ public class Cosmonaut : Actor {
 	}
 
 	void AttachCamera() {
-		camera = cameraSlot.AddComponent<Camera>();
+		GameObject cosmoCameraPrefab = Resources.Load<GameObject>("CosmoCamera");
+		GameObject newCameraGO = GameObject.Instantiate(cosmoCameraPrefab) as GameObject;
+		camera = newCameraGO.GetComponent<Camera>();
+		newCameraGO.transform.parent = cameraSlot.transform;
+		newCameraGO.transform.ZeroLocalPosition();
 	}
 
 	#region actions

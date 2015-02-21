@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: SatSun
-  m_Shader: {fileID: 4800000, guid: d3073e2653cda874cba97b7ff943f99d, type: 3}
+  m_Shader: {fileID: 4800000, guid: 81306446f6c17c647a9375975fd61c78, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -102,15 +102,15 @@ Material:
       data:
         first:
           name: _glow
-        second: 7
+        second: 6.69999981
       data:
         first:
           name: _thinness
-        second: 2.93000007
+        second: 1.25999999
       data:
         first:
           name: _faceOpacity
-        second: .482142866
+        second: .357142866
       data:
         first:
           name: _falloff
@@ -151,7 +151,7 @@ Material:
       data:
         first:
           name: _tint
-        second: {r: 1, g: .475861996, b: 0, a: 1}
+        second: {r: .462389529, g: .165387094, b: .977941155, a: 1}
       data:
         first:
           name: _skyColor

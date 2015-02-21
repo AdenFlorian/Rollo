@@ -27,6 +27,7 @@ GameObject:
   - 4: {fileID: 415442}
   - 114: {fileID: 11422274}
   - 135: {fileID: 13557276}
+  - 148: {fileID: 14823704}
   m_Layer: 0
   m_Name: campfire
   m_TagString: Untagged
@@ -702,6 +703,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: .74000001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!148 &14823704
+NetworkView:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115442}
+  m_Enabled: 1
+  m_StateSynchronization: 0
+  m_Observed: {fileID: 415442}
+  m_ViewID:
+    m_ID: 0
+    m_Type: 0
 --- !u!198 &19810612
 ParticleSystem:
   m_ObjectHideFlags: 1

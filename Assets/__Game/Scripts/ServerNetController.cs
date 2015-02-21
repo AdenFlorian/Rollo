@@ -6,13 +6,13 @@ public class ServerNetController : MonoBehaviour {
 	int playerCount = 0;
 	int disconnectTimeout = 200; // Default 200
 
-	void Start() {
+	public void Init() {
 		Network.InitializeSecurity();
 		bool useNat = !Network.HavePublicAddress();
 		Network.InitializeServer(256, NetConfig.serverPort, useNat);
 	}
 
-	void Disconnect() {
+	public void Disconnect() {
 		Network.Disconnect(disconnectTimeout);
 	}
 
