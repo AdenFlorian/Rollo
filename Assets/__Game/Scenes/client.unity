@@ -8103,6 +8103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disconnectTimeout: 200
+  connectTo: 2
 --- !u!114 &1693569635
 MonoBehaviour:
   m_ObjectHideFlags: 0

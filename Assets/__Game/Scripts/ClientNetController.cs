@@ -4,6 +4,7 @@ using System.Collections;
 public class ClientNetController : MonoBehaviour {
 
 	public int disconnectTimeout = 200; // Default 200
+	public ConnectTo connectTo = ConnectTo.localhost;
 
 	public void Connect() {
 		ConnectToServer();
@@ -14,8 +15,22 @@ public class ClientNetController : MonoBehaviour {
 	}
 
 	void ConnectToServer() {
-		Debug.Log("Connecting to server...");
-		Network.Connect("127.0.0.1", NetConfig.serverPort);
+		switch (connectTo) {
+			case ConnectTo.localhost:
+				Debug.Log("Connecting to localhost server...");
+				Network.Connect("127.0.0.1", NetConfig.serverPort);
+				break;
+			case ConnectTo.localvagrant:
+				Debug.Log("Connecting to vagrant server...");
+				Network.Connect(NetConfig.server_vagrant, NetConfig.serverPort);
+				break;
+			case ConnectTo.lempub14:
+				Debug.Log("Connecting to lempub14 server...");
+				Network.Connect(NetConfig.server_lempub14, NetConfig.serverPort);
+				break;
+			default:
+				break;
+		}
 	}
 
 	#region callbacks
@@ -39,4 +54,10 @@ public class ClientNetController : MonoBehaviour {
 		ConnectToServer();
 	}
 	#endregion
+}
+
+public enum ConnectTo {
+	localhost,
+	localvagrant,
+	lempub14
 }
