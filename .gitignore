@@ -31,6 +31,9 @@
 # Unity3D Generated File On Crash Reports
 sysinfo.txt 
 
+# Vagrant
+.vagrant
+
 # =============== #
 # Unity generated #
 # =============== #
