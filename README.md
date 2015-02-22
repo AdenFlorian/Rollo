@@ -1,6 +1,6 @@
 # _Fenrir_
 
-_Unity3D game for #onegameamonth February 2015_
+_Unity3D Online Multiplayer Prototype_
 
 ## Project Setup
 
