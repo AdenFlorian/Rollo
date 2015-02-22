@@ -10,8 +10,11 @@ public class ActorTestScene : MonoBehaviour {
 	}
 
 	void Start() {
+		Rand.RandomizeSeed();
 		//SpawnMaster.SpawnActor<Cosmonaut>(ControlledBy.PlayerLocal, spawnLocation.transform.position);
-		SpawnMaster.SpawnActor<Cosmonaut>(spawnPos: spawnLocation.transform.position);
+		Cosmonaut newCosmonaut = SpawnMaster.SpawnActor<Cosmonaut>(spawnPos: spawnLocation.transform.position);
+		newCosmonaut.InitController(ControlledBy.PlayerLocal);
+		newCosmonaut.SetNameTag(Rand.StrName());
 	}
 	
 	void Update () {

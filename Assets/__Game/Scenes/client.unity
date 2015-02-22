@@ -1337,7 +1337,6 @@ GameObject:
   - 4: {fileID: 121829787}
   - 114: {fileID: 121829789}
   - 135: {fileID: 121829788}
-  - 148: {fileID: 121829790}
   m_Layer: 0
   m_Name: campfire
   m_TagString: Untagged
@@ -1391,19 +1390,6 @@ MonoBehaviour:
   - {fileID: 4763889}
   - {fileID: 889746416}
   switchedNumTimes: 0
---- !u!148 &121829790
-NetworkView:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 14823704, guid: 64d1f2af705b1964a8a9fbe8ef969ffa,
-    type: 2}
-  m_PrefabInternal: {fileID: 351876211}
-  m_GameObject: {fileID: 121829786}
-  m_Enabled: 1
-  m_StateSynchronization: 0
-  m_Observed: {fileID: 121829787}
-  m_ViewID:
-    m_ID: 29
-    m_Type: 1
 --- !u!1 &128969261
 GameObject:
   m_ObjectHideFlags: 0
@@ -3111,11 +3097,11 @@ Prefab:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 14849484, guid: 23558713c43f90c428e7ad92e8885715, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_ID
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 14849484, guid: 23558713c43f90c428e7ad92e8885715, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_Type
       value: 1
       objectReference: {fileID: 0}
@@ -3251,7 +3237,6 @@ GameObject:
   - 4: {fileID: 320375201}
   - 114: {fileID: 320375203}
   - 135: {fileID: 320375202}
-  - 148: {fileID: 320375204}
   m_Layer: 0
   m_Name: campfire
   m_TagString: Untagged
@@ -3305,19 +3290,6 @@ MonoBehaviour:
   - {fileID: 368169646}
   - {fileID: 128969264}
   switchedNumTimes: 0
---- !u!148 &320375204
-NetworkView:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 14823704, guid: 64d1f2af705b1964a8a9fbe8ef969ffa,
-    type: 2}
-  m_PrefabInternal: {fileID: 1019981309}
-  m_GameObject: {fileID: 320375200}
-  m_Enabled: 1
-  m_StateSynchronization: 0
-  m_Observed: {fileID: 320375201}
-  m_ViewID:
-    m_ID: 28
-    m_Type: 1
 --- !u!1 &326177820
 GameObject:
   m_ObjectHideFlags: 0
@@ -3330,7 +3302,6 @@ GameObject:
   - 114: {fileID: 326177822}
   - 114: {fileID: 326177825}
   - 54: {fileID: 326177823}
-  - 148: {fileID: 326177826}
   m_Layer: 0
   m_Name: Satellite
   m_TagString: Untagged
@@ -3408,19 +3379,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   torque: {x: .600000024, y: -.340000004, z: .0900000036}
---- !u!148 &326177826
-NetworkView:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 14849484, guid: 23558713c43f90c428e7ad92e8885715,
-    type: 2}
-  m_PrefabInternal: {fileID: 281702251}
-  m_GameObject: {fileID: 326177820}
-  m_Enabled: 1
-  m_StateSynchronization: 2
-  m_Observed: {fileID: 326177821}
-  m_ViewID:
-    m_ID: 17
-    m_Type: 1
 --- !u!1001 &351876211
 Prefab:
   m_ObjectHideFlags: 0
@@ -3460,11 +3418,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 14823704, guid: 64d1f2af705b1964a8a9fbe8ef969ffa, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_ID
       value: 29
       objectReference: {fileID: 0}
-    - target: {fileID: 14823704, guid: 64d1f2af705b1964a8a9fbe8ef969ffa, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_Type
       value: 1
       objectReference: {fileID: 0}
@@ -4774,7 +4732,6 @@ GameObject:
   - 114: {fileID: 424182087}
   - 114: {fileID: 424182085}
   - 54: {fileID: 424182088}
-  - 148: {fileID: 424182089}
   m_Layer: 0
   m_Name: Satellite
   m_TagString: Untagged
@@ -4852,19 +4809,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!148 &424182089
-NetworkView:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 14849484, guid: 23558713c43f90c428e7ad92e8885715,
-    type: 2}
-  m_PrefabInternal: {fileID: 641665397}
-  m_GameObject: {fileID: 424182083}
-  m_Enabled: 1
-  m_StateSynchronization: 2
-  m_Observed: {fileID: 424182084}
-  m_ViewID:
-    m_ID: 19
-    m_Type: 1
 --- !u!1001 &459163769
 Prefab:
   m_ObjectHideFlags: 0
@@ -4992,11 +4936,11 @@ Prefab:
       propertyPath: m_Intensity
       value: 1.82000005
       objectReference: {fileID: 0}
-    - target: {fileID: 14849484, guid: 23558713c43f90c428e7ad92e8885715, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_ID
       value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 14849484, guid: 23558713c43f90c428e7ad92e8885715, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_Type
       value: 1
       objectReference: {fileID: 0}
@@ -5359,11 +5303,11 @@ Prefab:
       propertyPath: m_Intensity
       value: 1.82000005
       objectReference: {fileID: 0}
-    - target: {fileID: 14849484, guid: 23558713c43f90c428e7ad92e8885715, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_ID
       value: 19
       objectReference: {fileID: 0}
-    - target: {fileID: 14849484, guid: 23558713c43f90c428e7ad92e8885715, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_Type
       value: 1
       objectReference: {fileID: 0}
@@ -5444,8 +5388,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   watchesUIText: {fileID: 1774826666}
   debugLogsUIText: {fileID: 1163478882}
-  normalColor: {r: .941176474, g: .545805991, b: .186851218, a: 0}
-  errorColor: {r: .867647052, g: .242430821, b: .242430821, a: 0}
+  normalColor: {r: .941176474, g: .545805991, b: .186851218, a: 1}
+  errorColor: {r: .867647052, g: .242430821, b: .242430821, a: 1}
 --- !u!4 &773842682
 Transform:
   m_ObjectHideFlags: 0
@@ -5471,7 +5415,6 @@ GameObject:
   - 23: {fileID: 804625723}
   - 114: {fileID: 804625722}
   - 64: {fileID: 804625721}
-  - 148: {fileID: 804625726}
   m_Layer: 0
   m_Name: Planet
   m_TagString: Untagged
@@ -5547,19 +5490,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1524454422}
   m_RootOrder: 2
---- !u!148 &804625726
-NetworkView:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 14813792, guid: b3084f7bd6d705748b95fac7dff9fed9,
-    type: 2}
-  m_PrefabInternal: {fileID: 1081240254}
-  m_GameObject: {fileID: 804625720}
-  m_Enabled: 1
-  m_StateSynchronization: 2
-  m_Observed: {fileID: 804625725}
-  m_ViewID:
-    m_ID: 27
-    m_Type: 1
 --- !u!1 &856272038
 GameObject:
   m_ObjectHideFlags: 0
@@ -6827,7 +6757,6 @@ GameObject:
   - 114: {fileID: 951392364}
   - 114: {fileID: 951392363}
   - 54: {fileID: 951392362}
-  - 148: {fileID: 951392366}
   m_Layer: 0
   m_Name: Satellite
   m_TagString: Untagged
@@ -6905,19 +6834,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchVector: {x: .5, y: -.699999988, z: 1}
   startSpeed: 100
---- !u!148 &951392366
-NetworkView:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 14849484, guid: 23558713c43f90c428e7ad92e8885715,
-    type: 2}
-  m_PrefabInternal: {fileID: 459163769}
-  m_GameObject: {fileID: 951392360}
-  m_Enabled: 1
-  m_StateSynchronization: 2
-  m_Observed: {fileID: 951392361}
-  m_ViewID:
-    m_ID: 20
-    m_Type: 1
 --- !u!1001 &1019981309
 Prefab:
   m_ObjectHideFlags: 0
@@ -6957,11 +6873,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 14823704, guid: 64d1f2af705b1964a8a9fbe8ef969ffa, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_ID
       value: 28
       objectReference: {fileID: 0}
-    - target: {fileID: 14823704, guid: 64d1f2af705b1964a8a9fbe8ef969ffa, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_Type
       value: 1
       objectReference: {fileID: 0}
@@ -7038,11 +6954,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 14813792, guid: b3084f7bd6d705748b95fac7dff9fed9, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_ID
       value: 27
       objectReference: {fileID: 0}
-    - target: {fileID: 14813792, guid: b3084f7bd6d705748b95fac7dff9fed9, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_Type
       value: 1
       objectReference: {fileID: 0}
@@ -7066,6 +6982,7 @@ GameObject:
   - 222: {fileID: 1163478883}
   - 114: {fileID: 1163478882}
   - 114: {fileID: 1163478881}
+  - 95: {fileID: 1163478885}
   - 95: {fileID: 1163478884}
   m_Layer: 5
   m_Name: DebugLogs
@@ -7133,7 +7050,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: wgwegw
+  m_Text: 
 --- !u!222 &1163478883
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7147,6 +7064,22 @@ Animator:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1163478879}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dd4bb8de46a12bf43918de29c3249b9d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &1163478885
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9558186, guid: f079258901f64044f92615e584b85376,
+    type: 2}
+  m_PrefabInternal: {fileID: 1813146904}
   m_GameObject: {fileID: 1163478879}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
@@ -7616,7 +7549,6 @@ GameObject:
   - 114: {fileID: 1475559900}
   - 114: {fileID: 1475559899}
   - 54: {fileID: 1475559898}
-  - 148: {fileID: 1475559902}
   m_Layer: 0
   m_Name: Satellite
   m_TagString: Untagged
@@ -7694,19 +7626,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchVector: {x: .600000024, y: -.370000005, z: .49000001}
   startSpeed: 90.7099991
---- !u!148 &1475559902
-NetworkView:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 14849484, guid: 23558713c43f90c428e7ad92e8885715,
-    type: 2}
-  m_PrefabInternal: {fileID: 2139461376}
-  m_GameObject: {fileID: 1475559896}
-  m_Enabled: 1
-  m_StateSynchronization: 2
-  m_Observed: {fileID: 1475559897}
-  m_ViewID:
-    m_ID: 18
-    m_Type: 1
 --- !u!1 &1524454421
 GameObject:
   m_ObjectHideFlags: 0
@@ -8427,6 +8346,14 @@ Prefab:
       propertyPath: m_PlayAutomatically
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11488278, guid: f079258901f64044f92615e584b85376, type: 2}
+      propertyPath: normalColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11488278, guid: f079258901f64044f92615e584b85376, type: 2}
+      propertyPath: errorColor.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11144256, guid: f079258901f64044f92615e584b85376, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f079258901f64044f92615e584b85376, type: 2}
@@ -8997,11 +8924,11 @@ Prefab:
       propertyPath: m_Color.b
       value: .131034613
       objectReference: {fileID: 0}
-    - target: {fileID: 14849484, guid: 23558713c43f90c428e7ad92e8885715, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_ID
       value: 18
       objectReference: {fileID: 0}
-    - target: {fileID: 14849484, guid: 23558713c43f90c428e7ad92e8885715, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_Type
       value: 1
       objectReference: {fileID: 0}

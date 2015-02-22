@@ -1,0 +1,1 @@
+start RolloServer.exe -batchmode -nographics

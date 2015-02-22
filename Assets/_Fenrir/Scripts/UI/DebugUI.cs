@@ -8,6 +8,7 @@ public class DebugUI : MonoBehaviour {
 
 	public UnityEngine.UI.Text watchesUIText;
 	public UnityEngine.UI.Text debugLogsUIText;
+	Animator debugLogsUITextAnimator;
 
 	public Color normalColor;
 	public Color errorColor;
@@ -48,7 +49,6 @@ public class DebugUI : MonoBehaviour {
 	}
 
 	void HandleLog(string logString, string stackTrace, LogType type) {
-		Debug.Log("wewgw");
 		debugLogsUIText.text = logString;
 		Color newColor = normalColor;
 		switch (type) {
@@ -67,6 +67,9 @@ public class DebugUI : MonoBehaviour {
 				break;
 		}
 		debugLogsUIText.color = newColor;
-		debugLogsUIText.animation.Play();
+		if (debugLogsUITextAnimator == null) {
+			debugLogsUITextAnimator = debugLogsUIText.GetComponent<Animator>();
+		}
+		debugLogsUITextAnimator.SetTrigger("fadeout");
 	}
 }

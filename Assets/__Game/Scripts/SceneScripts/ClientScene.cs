@@ -19,6 +19,9 @@ public class ClientScene : MonoBehaviour {
 	}
 
 	void OnConnectedToServer() {
-		SpawnMaster.SpawnActor<Cosmonaut>(ControlledBy.PlayerLocal, spawnLocation.position, new Quaternion(), netSpawn: true);
+		Rand.RandomizeSeed();
+		Cosmonaut newCosmonaut = SpawnMaster.SpawnActor<Cosmonaut>(ControlledBy.PlayerLocal, spawnLocation.position,
+			new Quaternion(), netSpawn: true);
+		newCosmonaut.SetNameTag(Rand.StrName());
 	}
 }

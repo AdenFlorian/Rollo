@@ -12,7 +12,6 @@ GameObject:
   - 114: {fileID: 11401782}
   - 114: {fileID: 11450704}
   - 54: {fileID: 5401782}
-  - 148: {fileID: 14849484}
   m_Layer: 0
   m_Name: Satellite
   m_TagString: Untagged
@@ -401,18 +400,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchVector: {x: 0, y: 0, z: 1}
   startSpeed: 75
---- !u!148 &14849484
-NetworkView:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 156484}
-  m_Enabled: 1
-  m_StateSynchronization: 2
-  m_Observed: {fileID: 456484}
-  m_ViewID:
-    m_ID: 0
-    m_Type: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

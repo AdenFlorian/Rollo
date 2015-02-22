@@ -63,7 +63,7 @@ GameObject:
   - 222: {fileID: 22288276}
   - 114: {fileID: 11488276}
   - 114: {fileID: 11476908}
-  - 111: {fileID: 11144256}
+  - 95: {fileID: 9558186}
   m_Layer: 5
   m_Name: DebugLogs
   m_TagString: Untagged
@@ -78,27 +78,27 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 179978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -700.660217, y: -277.097565, z: -282.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22479976}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!111 &11144256
-Animation:
+--- !u!95 &9558186
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 188276}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 8310f0e4e3f573046b5739c5a1479cfd, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 8310f0e4e3f573046b5739c5a1479cfd, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dd4bb8de46a12bf43918de29c3249b9d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11433880
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -215,7 +215,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: wgwegw
+  m_Text: 
 --- !u!114 &11488278
 MonoBehaviour:
   m_ObjectHideFlags: 1

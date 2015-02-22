@@ -20,6 +20,11 @@ public class CosmonautControllerPlayer : CosmonautController {
 		if (ActionMaster.GetAction(ActionCode.Jump)) {
 			cosmonaut.Jump();
 		}
+		if (Input.GetKeyDown(KeyCode.N)) {
+			string newname = Rand.StrName();
+			cosmonaut.SetNameTag(newname);
+			Debug.Log("NameTag changed to " + newname);
+		}
 
 		// Axes
 		cosmonaut.LookHorizontal(ActionMaster.GetAxis(AxisCode.LookHorizontal));

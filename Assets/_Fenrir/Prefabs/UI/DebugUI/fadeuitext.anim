@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: debugUIDebugLogs
+  m_Name: fadeuitext
   serializedVersion: 4
   m_AnimationType: 2
   m_Compressed: 0
@@ -78,13 +78,18 @@ AnimationClip:
       - time: 0
         value: 1
         inSlope: -.166666672
-        outSlope: -.166666672
-        tangentMode: 10
+        outSlope: -0
+        tangentMode: 17
+      - time: 2.29999995
+        value: 1
+        inSlope: 0
+        outSlope: -.270270258
+        tangentMode: 21
       - time: 6
         value: 0
-        inSlope: -.166666672
-        outSlope: -.166666672
-        tangentMode: 10
+        inSlope: -.270270258
+        outSlope: 0
+        tangentMode: 5
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_Color.a
@@ -205,13 +210,18 @@ AnimationClip:
       - time: 0
         value: 1
         inSlope: -.166666672
-        outSlope: -.166666672
-        tangentMode: 10
+        outSlope: -0
+        tangentMode: 17
+      - time: 2.29999995
+        value: 1
+        inSlope: 0
+        outSlope: -.270270258
+        tangentMode: 21
       - time: 6
         value: 0
-        inSlope: -.166666672
-        outSlope: -.166666672
-        tangentMode: 10
+        inSlope: -.270270258
+        outSlope: 0
+        tangentMode: 5
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_Color.a

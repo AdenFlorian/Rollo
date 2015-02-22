@@ -12,7 +12,6 @@ GameObject:
   - 23: {fileID: 2329862}
   - 114: {fileID: 11429862}
   - 64: {fileID: 6429862}
-  - 148: {fileID: 14813792}
   m_Layer: 0
   m_Name: planet
   m_TagString: Untagged
@@ -84,18 +83,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityAcceleration: 5
---- !u!148 &14813792
-NetworkView:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 129862}
-  m_Enabled: 1
-  m_StateSynchronization: 2
-  m_Observed: {fileID: 429862}
-  m_ViewID:
-    m_ID: 0
-    m_Type: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

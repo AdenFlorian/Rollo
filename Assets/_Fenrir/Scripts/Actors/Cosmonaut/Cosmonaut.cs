@@ -12,6 +12,7 @@ public class Cosmonaut : Actor {
 	public ControlledBy overrideControllerIfEmpty;
 
 	public GameObject cameraSlot;
+	public UnityEngine.UI.Text nametagUIText;
 
 	public CosmonautController controller { get; private set; }
 	public new Camera camera { get; private set; }
@@ -94,6 +95,15 @@ public class Cosmonaut : Actor {
 
 	public void LookVertical(float degrees) {
 		humanMove.lookVertical = degrees;
+	}
+
+	[RPC]
+	void SetNameTagRPC(string nametag) {
+		nametagUIText.text = nametag;
+	}
+
+	public void SetNameTag(string nametag) {
+		networkView.RPC("SetNameTagRPC", RPCMode.AllBuffered, nametag);
 	}
 	#endregion
 }
