@@ -29,8 +29,9 @@ public class GameJoltAPIManager : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 
 		GJAPI.Init(gameID, privateKey);
-
-#if UNITY_WEBPLAYER
+#if UNITY_EDITOR
+		GJAPIHelper.Users.ShowLogin();
+#elif UNITY_WEBPLAYER
 		GJAPIHelper.Users.GetFromWeb(OnGetFromWeb);
 #else
 		GJAPIHelper.Users.ShowLogin();
