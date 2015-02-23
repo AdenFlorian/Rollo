@@ -27,9 +27,8 @@ public class ClientScene : MonoBehaviour {
 	}
 
 	void OnConnectedToServer() {
-		Rand.RandomizeSeed();
-		localCosmonaut = SpawnMaster.SpawnActor<Cosmonaut>(ControlledBy.PlayerLocal,
-			spawnLocation.position, new Quaternion(), netSpawn: true);
+		SpawnPlayer();
+
 		if (GJAPI.User != null && GJAPI.User.Name != "") {
 			SetLocalNameTag(GJAPI.User.Name);
 		} else {
@@ -37,7 +36,17 @@ public class ClientScene : MonoBehaviour {
 		}
 	}
 
+	void OnDisconnectedFromServer(NetworkDisconnection info) {
+		Application.LoadLevel(0);
+	}
+
 	void SetLocalNameTag(string newname) {
 		localCosmonaut.SetNameTag(newname);
+	}
+
+	void SpawnPlayer() {
+		Rand.RandomizeSeed();
+		localCosmonaut = SpawnMaster.SpawnActor<Cosmonaut>(ControlledBy.PlayerLocal,
+			spawnLocation.position, new Quaternion(), netSpawn: true);
 	}
 }
