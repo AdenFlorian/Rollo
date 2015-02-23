@@ -28,21 +28,21 @@ public class SpawnMaster : MonoBehaviour {
 		}
 
 		public static T[] SpawnActors<T>(int count, ControlledBy controller = ControlledBy.Empty,
-			Vector3[] spawnPoss = null, Quaternion[] spawnRots = null,
+			Vector3[] spawnPos = null, Quaternion[] spawnRots = null,
 			bool netSpawn = false) where T : Actor {
 
 			T[] newActors = new T[count];
 
-			if (spawnPoss == null) {
-					spawnPoss = new Vector3[] { new Vector3 () };
+			if (spawnPos == null) {
+					spawnPos = new Vector3[] { new Vector3 () };
 			}
 			if (spawnRots == null) {
 					spawnRots = new Quaternion[] { new Quaternion () };
 			}
 			for (int i = 0; i < count; i++) {
-					var j = (int)(i - Mathf.Floor (i / spawnPoss.Length) * spawnPoss.Length);
+					var j = (int)(i - Mathf.Floor (i / spawnPos.Length) * spawnPos.Length);
 					var k = (int)(i - Mathf.Floor (i / spawnRots.Length) * spawnRots.Length);
-					newActors[i] = SpawnActor<T>(controller, spawnPoss[j], spawnRots[k], netSpawn);
+					newActors[i] = SpawnActor<T>(controller, spawnPos[j], spawnRots[k], netSpawn);
 			}
 
 			return newActors;
