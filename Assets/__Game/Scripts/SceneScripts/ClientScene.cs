@@ -6,8 +6,12 @@ public class ClientScene : MonoBehaviour {
 	public Transform spawnLocation;
 	public ClientNetController clientNetController;
 
+	public static ClientScene Inst;
+
+	Cosmonaut localCosmonaut;
+
 	void Awake() {
-	
+		Inst = this;
 	}
 
 	void Start() {
@@ -18,10 +22,22 @@ public class ClientScene : MonoBehaviour {
 	
 	}
 
+	public void OnGJAPIVerifyUser() {
+		SetLocalNameTag(GJAPI.User.Name);
+	}
+
 	void OnConnectedToServer() {
 		Rand.RandomizeSeed();
-		Cosmonaut newCosmonaut = SpawnMaster.SpawnActor<Cosmonaut>(ControlledBy.PlayerLocal, spawnLocation.position,
-			new Quaternion(), netSpawn: true);
-		newCosmonaut.SetNameTag(Rand.StrName());
+		localCosmonaut = SpawnMaster.SpawnActor<Cosmonaut>(ControlledBy.PlayerLocal,
+			spawnLocation.position, new Quaternion(), netSpawn: true);
+		if (GJAPI.User != null && GJAPI.User.Name != "") {
+			SetLocalNameTag(GJAPI.User.Name);
+		} else {
+			SetLocalNameTag(Rand.StrName());
+		}
+	}
+
+	void SetLocalNameTag(string newname) {
+		localCosmonaut.SetNameTag(newname);
 	}
 }

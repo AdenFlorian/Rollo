@@ -34,6 +34,7 @@ sysinfo.txt
 # Vagrant
 .vagrant
 _Vagrant/rollo
+_Vagrant64/rollo
 
 # =============== #
 # Unity generated #

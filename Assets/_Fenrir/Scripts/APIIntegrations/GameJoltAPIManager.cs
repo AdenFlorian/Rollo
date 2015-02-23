@@ -6,11 +6,16 @@ public enum GJTrophyEx {
 	StartFire = 16442
 }
 
+/// <summary>
+/// Client Only!
+/// </summary>
 public class GameJoltAPIManager : MonoBehaviour {
 
-	public static GameJoltAPIManager Inst;
 	public int gameID;
 	public string privateKey;
+
+	public static GameJoltAPIManager Inst;
+
 	bool userIsVerified = false;
 	GJTrophy[] userTrophies;
 
@@ -27,31 +32,9 @@ public class GameJoltAPIManager : MonoBehaviour {
 
 #if UNITY_WEBPLAYER
 		GJAPIHelper.Users.GetFromWeb(OnGetFromWeb);
+#else
+		GJAPIHelper.Users.ShowLogin();
 #endif
-	}
-
-	// Callbacks
-	void OnVerifyUser(bool success) {
-		if (success) {
-			Debug.Log("Yepee!");
-			GJAPIHelper.Users.ShowGreetingNotification();
-			userIsVerified = true;
-			GJAPI.Trophies.GetAll();
-		} else {
-			Debug.Log("Um... Something went wrong.");
-		}
-	}
-	void OnGetFromWeb(string name, string token) {
-		if (name != "" && token != "") {
-			Debug.Log("GJAPI: Verifying " + name + "@" + token);
-			GJAPI.Users.Verify(name, token);
-		}
-	}
-	void OnGetAllTrophies(GJTrophy[] trophies) {
-		userTrophies = trophies;
-	}
-	void OnAddTrophy(bool success) {
-		
 	}
 
 	public void AwardTrophy(GJTrophyEx trophy) {
@@ -76,5 +59,30 @@ public class GameJoltAPIManager : MonoBehaviour {
 			}
 		}
 		return false;
+	}
+
+	// Callbacks
+	void OnVerifyUser(bool success) {
+		if (success) {
+			Debug.Log("Yepee!");
+			GJAPIHelper.Users.ShowGreetingNotification();
+			userIsVerified = true;
+			GJAPI.Trophies.GetAll();
+			ClientScene.Inst.OnGJAPIVerifyUser();
+		} else {
+			Debug.Log("Um... Something went wrong.");
+		}
+	}
+	void OnGetFromWeb(string name, string token) {
+		if (name != "" && token != "") {
+			Debug.Log("GJAPI: Verifying " + name + "@" + token);
+			GJAPI.Users.Verify(name, token);
+		}
+	}
+	void OnGetAllTrophies(GJTrophy[] trophies) {
+		userTrophies = trophies;
+	}
+	void OnAddTrophy(bool success) {
+		
 	}
 }

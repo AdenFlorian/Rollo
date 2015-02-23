@@ -28,9 +28,8 @@ public class ServerNetController : MonoBehaviour {
 	}
 
 	void OnPlayerConnected(NetworkPlayer player) {
-		Debug.Log("Player " + playerCount++ + " connected from " + player.ipAddress + ":" + player.port);
-
-
+		Debug.Log("Player " + player + " connected from " + player.ipAddress + ":" + player.port);
+		playerCount++;
 	}
 
 	void OnPlayerDisconnected(NetworkPlayer player) {

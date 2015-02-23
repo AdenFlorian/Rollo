@@ -13,14 +13,16 @@ public class DebugUI : MonoBehaviour {
 	public Color normalColor;
 	public Color errorColor;
 
-	public static bool display = false;
-	public static string uiTextStr;
+	public bool toggleAll = true;
+	public bool toggleWatches = true;
+	public bool toggleDebugLogs = true;
+	public string watchesText;
 
 	void Awake () {
 		Inst = this;
 
 		if (!Debug.isDebugBuild) {
-			display = false;
+			toggleAll = false;
 		}
 	}
 	
@@ -35,16 +37,16 @@ public class DebugUI : MonoBehaviour {
 	}
 
 	void Update() {
-		uiTextStr = "";
+		watchesText = "";
 	}
 
 	void LateUpdate() {
-		watchesUIText.text = uiTextStr;
+		watchesUIText.text = watchesText;
 	}
 
 	public static void AddWatchLine(string line) {
-		if (display) {
-			uiTextStr += line + "\n";
+		if (Inst.toggleAll && Inst.toggleWatches) {
+			Inst.watchesText += line + "\n";
 	    }
 	}
 
