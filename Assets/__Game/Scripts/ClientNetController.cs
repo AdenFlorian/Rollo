@@ -39,13 +39,17 @@ public class ClientNetController : MonoBehaviour {
 	}
 
 	void OnDisconnectedFromServer(NetworkDisconnection info) {
-		if (Network.isServer)
+		if (Network.isServer) {
 			Debug.Log("Local server connection disconnected");
-		else
-			if (info == NetworkDisconnection.LostConnection)
+		} else {
+			if (info == NetworkDisconnection.LostConnection) {
 				Debug.Log("Lost connection to the server");
-			else
-				Debug.Log("Successfully diconnected from the server");
+				Debug.Log("Attempting to reconnect...");
+				ConnectToServer();
+			} else {
+				Debug.Log("Successfully disconnected from the server");
+			}
+		}
 	}
 
 	void OnFailedToConnect(NetworkConnectionError error) {
