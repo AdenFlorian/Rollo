@@ -33,23 +33,23 @@ public class GravityPlayer : Actor {
 		// Fall towards planet
 		Vector3 vectorToPlanetCenter = planet.transform.position - transform.position;
 		if (!grounded) {
-			rigidbody.AddForce(vectorToPlanetCenter * planet.gravityAcceleration);
+			GetComponent<Rigidbody>().AddForce(vectorToPlanetCenter * planet.gravityAcceleration);
 		}
 
 		if (ActionMaster.GetAction(ActionCode.MoveForward)) {
-			rigidbody.AddForce(transform.forward * moveForce);
+			GetComponent<Rigidbody>().AddForce(transform.forward * moveForce);
 		} else if (ActionMaster.GetAction(ActionCode.MoveBackward)) {
-			rigidbody.AddForce(-transform.forward * moveForce);
+			GetComponent<Rigidbody>().AddForce(-transform.forward * moveForce);
 		}
 		if (ActionMaster.GetAction(ActionCode.StrafeLeft)) {
-			rigidbody.AddForce(-transform.right * moveForce);
+			GetComponent<Rigidbody>().AddForce(-transform.right * moveForce);
 		} else if (ActionMaster.GetAction(ActionCode.StrafeRight)) {
-			rigidbody.AddForce(transform.right * moveForce);
+			GetComponent<Rigidbody>().AddForce(transform.right * moveForce);
 		}
 		if (ActionMaster.GetAction(ActionCode.Jump)) {
-			rigidbody.AddForce(transform.up * moveForce);
+			GetComponent<Rigidbody>().AddForce(transform.up * moveForce);
 		}
-		rigidbody.velocity = Vector3.ClampMagnitude(rigidbody.velocity, 8f);
+		GetComponent<Rigidbody>().velocity = Vector3.ClampMagnitude(GetComponent<Rigidbody>().velocity, 8f);
 	}
 
 	void LookThink() {

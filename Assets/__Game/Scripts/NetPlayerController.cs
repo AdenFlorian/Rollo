@@ -10,7 +10,7 @@ public class NetPlayerController : MonoBehaviour {
 	}
 
 	void Start () {
-		if (!networkView.isMine) {
+		if (!GetComponent<NetworkView>().isMine) {
 			
 		}
 	}

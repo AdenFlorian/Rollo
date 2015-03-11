@@ -26,12 +26,12 @@ public class NetInfo : MonoBehaviour {
 
 	// Server Functions
 	public void IncrementPlayerCount() {
-		networkView.RPC("SetPlayerCountRPC", RPCMode.Others, ++connectedPlayerCount);
+		GetComponent<NetworkView>().RPC("SetPlayerCountRPC", RPCMode.Others, ++connectedPlayerCount);
 		Debug.Log("inc " + connectedPlayerCount);
 	}
 
 	public void DecrementPlayerCount() {
-		networkView.RPC("SetPlayerCountRPC", RPCMode.Others, --connectedPlayerCount);
+		GetComponent<NetworkView>().RPC("SetPlayerCountRPC", RPCMode.Others, --connectedPlayerCount);
 		Debug.Log("dec " + connectedPlayerCount);
 	}
 

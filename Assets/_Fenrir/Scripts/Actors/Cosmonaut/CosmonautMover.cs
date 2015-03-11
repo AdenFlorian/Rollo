@@ -31,19 +31,19 @@ public class CosmonautMover : CosmonautComponent {
 	void FixedUpdate() {
 
 		if (cosmonaut.humanMove.forth) {
-			rigidbody.AddForce(transform.forward * moveForce);
+			GetComponent<Rigidbody>().AddForce(transform.forward * moveForce);
 		} else if (cosmonaut.humanMove.back) {
-			rigidbody.AddForce(-transform.forward * moveForce);
+			GetComponent<Rigidbody>().AddForce(-transform.forward * moveForce);
 		}
 		if (cosmonaut.humanMove.left) {
-			rigidbody.AddForce(-transform.right * moveForce);
+			GetComponent<Rigidbody>().AddForce(-transform.right * moveForce);
 		} else if (cosmonaut.humanMove.right) {
-			rigidbody.AddForce(transform.right * moveForce);
+			GetComponent<Rigidbody>().AddForce(transform.right * moveForce);
 		}
 		if (cosmonaut.humanMove.jump) {
-			rigidbody.AddForce(transform.up * moveForce);
+			GetComponent<Rigidbody>().AddForce(transform.up * moveForce);
 		}
-		rigidbody.velocity = Vector3.ClampMagnitude(rigidbody.velocity, 8f);
+		GetComponent<Rigidbody>().velocity = Vector3.ClampMagnitude(GetComponent<Rigidbody>().velocity, 8f);
 
 
 		cosmonaut.humanMove.forth = false;

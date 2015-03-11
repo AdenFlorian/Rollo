@@ -7,6 +7,6 @@ public class StartWithSpinGene : MonoBehaviour {
 	public Vector3 torque;
 
 	void Start () {
-		rigidbody.AddTorque(torque, ForceMode.VelocityChange);
+		GetComponent<Rigidbody>().AddTorque(torque, ForceMode.VelocityChange);
 	}
 }

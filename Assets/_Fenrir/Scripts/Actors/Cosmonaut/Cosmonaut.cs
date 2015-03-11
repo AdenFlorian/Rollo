@@ -103,7 +103,7 @@ public class Cosmonaut : Actor {
 	}
 
 	public void SetNameTag(string nametag) {
-		networkView.RPC("SetNameTagRPC", RPCMode.AllBuffered, nametag);
+		GetComponent<NetworkView>().RPC("SetNameTagRPC", RPCMode.AllBuffered, nametag);
 	}
 	#endregion
 }

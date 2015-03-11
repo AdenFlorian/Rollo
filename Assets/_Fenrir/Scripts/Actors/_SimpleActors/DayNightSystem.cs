@@ -45,7 +45,7 @@ public class DayNightSystem : MonoBehaviour {
 		skyAtmosRenderer.sharedMaterial.SetFloat("_timeOfDay", timeOfDay);
 		skyAtmosRenderer.sharedMaterial.SetColor("_skyColor", Color.Lerp(nightSkyColor, daySkyColor, curve.Evaluate(timeOfDay)));
 		skyAtmosRenderer.sharedMaterial.SetColor("_atmosColor", RenderSettings.fogColor);
-		sunDLight.light.intensity = curve.Evaluate(timeOfDay) * sunIntensity;
-		moonDLight.light.intensity = (1 - curve.Evaluate(timeOfDay)) * moonIntensity;
+		sunDLight.GetComponent<Light>().intensity = curve.Evaluate(timeOfDay) * sunIntensity;
+		moonDLight.GetComponent<Light>().intensity = (1 - curve.Evaluate(timeOfDay)) * moonIntensity;
 	}
 }

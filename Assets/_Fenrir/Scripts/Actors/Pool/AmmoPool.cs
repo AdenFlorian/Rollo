@@ -43,7 +43,7 @@ public class AmmoPool : Actor {
 			newShell = SpawnMaster.Instantiate(tankShellPrefab);
 			tankShellQueue.Enqueue(newShell);
 			newShell.SetActive(false);
-			newShell.rigidbody.isKinematic = true;
+			newShell.GetComponent<Rigidbody>().isKinematic = true;
 		}
 	}
 }

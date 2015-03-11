@@ -72,7 +72,7 @@ public class ArtilleryShell : MonoBehaviour {
 
 	private void Dud() {
 		shellState = TankShellState.Dudded;
-		rigidbody.velocity = Vector3.zero;
+		GetComponent<Rigidbody>().velocity = Vector3.zero;
 		StartCoroutine("DelayedSendToPool");
 	}
 

@@ -1,6 +1,6 @@
 ﻿
 public class TankAudio : TankComponent {
 	protected void Update() {
-		audio.pitch = tank.mover.speedNormalized;
+		GetComponent<UnityEngine.AudioSource>().pitch = tank.mover.speedNormalized;
 	}
 }

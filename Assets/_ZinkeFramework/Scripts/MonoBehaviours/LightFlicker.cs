@@ -82,8 +82,8 @@ public class LightFlicker : MonoBehaviour {
 						if (CampfireSineCycleIntensity > 360.0f) CampfireSineCycleIntensity = 0.0f;
 
 						// Base + Values
-						light.intensity = CampfireIntensityBaseValue + ((Mathf.Sin(CampfireSineCycleIntensity * Mathf.Deg2Rad) * (CampfireIntensityFlickerValue / 2.0f)) + (CampfireIntensityFlickerValue / 2.0f));
-					} else light.intensity = CampfireIntensityBaseValue + Random.Range(0.0f, CampfireIntensityFlickerValue);
+						GetComponent<Light>().intensity = CampfireIntensityBaseValue + ((Mathf.Sin(CampfireSineCycleIntensity * Mathf.Deg2Rad) * (CampfireIntensityFlickerValue / 2.0f)) + (CampfireIntensityFlickerValue / 2.0f));
+					} else GetComponent<Light>().intensity = CampfireIntensityBaseValue + Random.Range(0.0f, CampfireIntensityFlickerValue);
 				}
 
 				// If campfire method is Range OR Both
@@ -95,21 +95,21 @@ public class LightFlicker : MonoBehaviour {
 						if (CampfireSineCycleRange > 360.0f) CampfireSineCycleRange = 0.0f;
 
 						// Base + Values
-						light.range = CampfireRangeBaseValue + ((Mathf.Sin(CampfireSineCycleRange * Mathf.Deg2Rad) * (CampfireSineCycleRange / 2.0f)) + (CampfireSineCycleRange / 2.0f));
-					} else light.range = CampfireRangeBaseValue + Random.Range(0.0f, CampfireRangeFlickerValue);
+						GetComponent<Light>().range = CampfireRangeBaseValue + ((Mathf.Sin(CampfireSineCycleRange * Mathf.Deg2Rad) * (CampfireSineCycleRange / 2.0f)) + (CampfireSineCycleRange / 2.0f));
+					} else GetComponent<Light>().range = CampfireRangeBaseValue + Random.Range(0.0f, CampfireRangeFlickerValue);
 				}
 				break;
 
 			// If Flickering Style is Fluorescent
 			case flickerinLightStyles.Fluorescent:
 				if (Random.Range(0.0f, 1.0f) > FluorescentFlicerPercent) {
-					light.intensity = FluorescentFlickerMin;
+					GetComponent<Light>().intensity = FluorescentFlickerMin;
 
 					// Check Audio - NOT IMPLEMENTED YET
 					if (FluorescentFlickerPlaySound) {
 
 					}
-				} else light.intensity = FluorescentFlickerMax;
+				} else GetComponent<Light>().intensity = FluorescentFlickerMax;
 				break;
 
 			default:

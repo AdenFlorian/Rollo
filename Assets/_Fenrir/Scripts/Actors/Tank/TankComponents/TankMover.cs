@@ -69,7 +69,7 @@ public class TankMover : TankComponent {
 		Vector3 moveVec3 = Vector3.forward * forthBackForce * Time.deltaTime * 1000;
 
 		if (isGrounded && moveVec3.magnitude != 0f) {
-			rigidbody.AddRelativeForce(moveVec3, ForceMode.Acceleration);
+			GetComponent<Rigidbody>().AddRelativeForce(moveVec3, ForceMode.Acceleration);
 		}
 
 		tank.tankMove.Clear();
@@ -126,10 +126,10 @@ public class TankMover : TankComponent {
 	private void MoveOrder(TankMove moveOrder) {
 		if (moveOrder.forth) {
 			currentRPM += accelForward * Time.deltaTime;
-			forthBackForce = accelForward * Mathf.Clamp((-transform.worldToLocalMatrix.MultiplyVector(rigidbody.velocity).z / maxForward) + 1, 0, 1);
+			forthBackForce = accelForward * Mathf.Clamp((-transform.worldToLocalMatrix.MultiplyVector(GetComponent<Rigidbody>().velocity).z / maxForward) + 1, 0, 1);
 		} else if (moveOrder.back) {
 			currentRPM -= accelBackward * Time.deltaTime;
-			forthBackForce = -accelForward * Mathf.Clamp((-Mathf.Abs(transform.worldToLocalMatrix.MultiplyVector(rigidbody.velocity).z) / maxForward) + 1, 0, 1);
+			forthBackForce = -accelForward * Mathf.Clamp((-Mathf.Abs(transform.worldToLocalMatrix.MultiplyVector(GetComponent<Rigidbody>().velocity).z) / maxForward) + 1, 0, 1);
 		} else {
 
 			forthBackForce = 0f;

@@ -8,7 +8,7 @@ public class Launch : MonoBehaviour {
 	public float startSpeed;
 
 	void Start() {
-		rigidbody.AddForce(launchVector.normalized * startSpeed,
+		GetComponent<Rigidbody>().AddForce(launchVector.normalized * startSpeed,
 			ForceMode.VelocityChange);
 	}
 }

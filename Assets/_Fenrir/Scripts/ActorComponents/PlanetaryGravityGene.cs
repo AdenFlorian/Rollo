@@ -22,7 +22,7 @@ public class PlanetaryGravityGene : MonoBehaviour {
 		// Fall towards planet
 		if (planet != null) {
 			Vector3 vectorToPlanetCenter = planet.transform.position - transform.position;
-			rigidbody.AddForce(vectorToPlanetCenter.normalized * planet.gravityAcceleration, ForceMode.Acceleration);
+			GetComponent<Rigidbody>().AddForce(vectorToPlanetCenter.normalized * planet.gravityAcceleration, ForceMode.Acceleration);
 		}
 	}
 }
