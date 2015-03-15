@@ -5,11 +5,19 @@ public class AnomBuildMono : MonoBehaviour {
 
 	public string exeName = "MyGame";
 	public string buildsFolder = "C:\\";
-	public bool buildThenRun = false;
 	public int buildNumber = 1;
-	public string[] levels = { "Assets/_Fenrir/Scenes/Main.unity" };
-	public BuildTargetAnom[] buildTargets = { BuildTargetAnom.WebPlayer, BuildTargetAnom.StandaloneWindows };
+	public NetworkBuilds networkBuilds;
+	public string[] clientScenes = { "Assets/__Game/Scenes/client.unity" };
+	public string[] serverScenes = { "Assets/__Game/Scenes/server.unity" };
+	public BuildTargetAnom[] buildClientTargets = { BuildTargetAnom.WebPlayer, BuildTargetAnom.StandaloneWindows };
+	public BuildTargetAnom[] buildServerTargets = { BuildTargetAnom.StandaloneWindows };
 
+}
+
+public enum NetworkBuilds {
+	ClientOnly,
+	ServerOnly,
+	ClientAndServer
 }
 
 

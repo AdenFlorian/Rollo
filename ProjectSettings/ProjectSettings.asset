@@ -252,7 +252,7 @@ PlayerSettings:
   psmSplashimage: {fileID: 0}
   spritePackerPolicy: 
   scriptingDefineSymbols:
-    1: 
+    1: GAMESERVER
   metroPackageName: SkyProject
   metroPackageLogo: 
   metroPackageLogo140: 

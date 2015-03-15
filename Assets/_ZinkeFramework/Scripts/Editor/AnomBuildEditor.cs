@@ -7,14 +7,10 @@ using System;
 [CustomEditor(typeof(AnomBuildMono))]
 public class AnomBuildEditor : Editor {
 
-	string exeExt;
+	string fileExtension;
 
-	 public override void OnInspectorGUI () {
-		//Called whenever the inspector is drawn for this object.
+	public override void OnInspectorGUI () {
 		DrawDefaultInspector();
-		//This draws the default screen. You don't need this if you want
-		//to start from scratch, but I use this when I'm just adding a button or
-		//some small addition and don't feel like recreating the whole inspector.
 
 		AnomBuildMono myScript = (AnomBuildMono)target;
  
@@ -23,33 +19,65 @@ public class AnomBuildEditor : Editor {
 		}
 	}
 
-	void BuildGame(AnomBuildMono buildDesc) {
+	 void BuildGame(AnomBuildMono buildDesc) {
 
-		// Build game(s)
-		foreach (BuildTargetAnom buildTargetAnom in buildDesc.buildTargets) {
-			BuildTarget buildTarget = (BuildTarget)Enum.Parse(typeof(BuildTarget), buildTargetAnom.ToString());
-			if (buildTarget == BuildTarget.StandaloneWindows || buildTarget == BuildTarget.StandaloneWindows64) {
-				exeExt = ".exe";
-			} else {
-				exeExt = "";
-			}
-			BuildPipeline.BuildPlayer(buildDesc.levels, buildDesc.buildsFolder + "/" +
-				buildDesc.buildNumber + "/" + buildTarget.ToString() + "/" + buildDesc.exeName + exeExt,
-				buildTarget, BuildOptions.None);
-		}
+		 BuildClients(buildDesc);
+		 BuildServers(buildDesc);
 
-		// Copy a file from the project folder to the build folder, alongside the built game.
-		//FileUtil.CopyFileOrDirectory("Assets/WebPlayerTemplates/Readme.txt", path + "Readme.txt");
+		 // Increase build number somehow...
+	 }
 
-		// Run the game
-		if (buildDesc.buildThenRun) {
-			Process proc = new Process();
-			proc.StartInfo.FileName = buildDesc.buildsFolder + "/" + buildDesc.exeName;
-			proc.Start();
-		}
+	 void BuildClients(AnomBuildMono buildDesc) {
+		 PlayerSettings.SetScriptingDefineSymbolsForGroup(BuildTargetGroup.Standalone, "GAMECLIENT");
 
-		buildDesc.buildNumber++;
-	}
+		 if (buildDesc.networkBuilds == NetworkBuilds.ClientOnly ||
+			 buildDesc.networkBuilds == NetworkBuilds.ClientAndServer) {
 
+			 foreach (BuildTargetAnom buildTargetAnom in buildDesc.buildClientTargets) {
+				 BuildTarget buildTarget = ParseBuildTarget(buildTargetAnom);
+				 if (buildTarget == BuildTarget.StandaloneWindows ||
+					 buildTarget == BuildTarget.StandaloneWindows64) {
+					 fileExtension = ".exe";
+				 } else {
+					 fileExtension = "";
+				 }
+				 BuildPipeline.BuildPlayer(buildDesc.clientScenes, buildDesc.buildsFolder + "/" +
+					 buildDesc.buildNumber + "/" + "Clients" + "/" + buildTarget.ToString() + "/" +
+					 buildDesc.exeName + fileExtension,
+					 buildTarget, BuildOptions.None);
 
+				 // Copy a file from the project folder to the build folder, alongside the built game.
+				 //FileUtil.CopyFileOrDirectory("Assets/WebPlayerTemplates/Readme.txt", path + "Readme.txt");
+			 }
+		 }
+	 }
+
+	 void BuildServers(AnomBuildMono buildDesc) {
+		 PlayerSettings.SetScriptingDefineSymbolsForGroup(BuildTargetGroup.Standalone, "GAMESERVER");
+
+		 if (buildDesc.networkBuilds == NetworkBuilds.ServerOnly ||
+			 buildDesc.networkBuilds == NetworkBuilds.ClientAndServer) {
+
+			 foreach (BuildTargetAnom buildTargetAnom in buildDesc.buildServerTargets) {
+				 BuildTarget buildTarget = ParseBuildTarget(buildTargetAnom);
+				 if (buildTarget == BuildTarget.StandaloneWindows ||
+					 buildTarget == BuildTarget.StandaloneWindows64) {
+					 fileExtension = ".exe";
+				 } else {
+					 fileExtension = "";
+				 }
+				 BuildPipeline.BuildPlayer(buildDesc.serverScenes, buildDesc.buildsFolder + "/" +
+					 buildDesc.buildNumber + "/" + "Servers" + "/" + buildTarget.ToString() + "/" +
+					 buildDesc.exeName + "Server" + fileExtension,
+					 buildTarget, BuildOptions.None);
+
+				 // Copy a file from the project folder to the build folder, alongside the built game.
+				 //FileUtil.CopyFileOrDirectory("Assets/WebPlayerTemplates/Readme.txt", path + "Readme.txt");
+			 }
+		 }
+	 }
+
+	 BuildTarget ParseBuildTarget(BuildTargetAnom buildTargetAnom) {
+		 return (BuildTarget)Enum.Parse(typeof(BuildTarget), buildTargetAnom.ToString());
+	 }
 }

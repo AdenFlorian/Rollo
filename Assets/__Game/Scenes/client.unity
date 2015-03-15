@@ -290,6 +290,46 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64d1f2af705b1964a8a9fbe8ef969ffa, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &372862656
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 372862657}
+  - 114: {fileID: 372862658}
+  m_Layer: 0
+  m_Name: Version
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &372862657
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 372862656}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1896913963}
+  m_RootOrder: 6
+--- !u!114 &372862658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 372862656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5180273f1946534286d2596d9dd242f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  versionStr: v9
 --- !u!4 &424182084
 Transform:
   m_PrefabParentObject: {fileID: 456484, guid: 23558713c43f90c428e7ad92e8885715, type: 2}
@@ -460,6 +500,55 @@ Transform:
   - {fileID: 773842682}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!1 &558896113
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 558896114}
+  - 114: {fileID: 558896115}
+  m_Layer: 0
+  m_Name: AnomBuild
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &558896114
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 558896113}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1896913963}
+  m_RootOrder: 7
+--- !u!114 &558896115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 558896113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6503213ef32c4a469bfb34203ec0322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exeName: Rollo
+  buildsFolder: A:\projects\Rollo\Builds
+  buildNumber: 9
+  networkBuilds: 2
+  clientScenes:
+  - Assets/__Game/Scenes/client.unity
+  serverScenes:
+  - Assets/__Game/Scenes/server.unity
+  buildClientTargets: 06000000
+  buildServerTargets: 05000000
 --- !u!1001 &641665397
 Prefab:
   m_ObjectHideFlags: 0
@@ -1031,7 +1120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disconnectTimeout: 200
-  connectTo: 2
+  connectTo: 0
 --- !u!114 &1693569635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1137,6 +1226,8 @@ Transform:
   - {fileID: 27480533}
   - {fileID: 1072056701}
   - {fileID: 1006970977}
+  - {fileID: 372862657}
+  - {fileID: 558896114}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!1 &2100422514
